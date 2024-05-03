@@ -24,7 +24,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-14 h-14 object-cover  border border-transparent rounded-full"
+            className="w-9 h-9 object-cover  border border-transparent rounded-full"
           />
           <p className="text-white text-[18x] font-bold cursor-pointer flex">
             Mübarek &nbsp;
@@ -46,7 +46,7 @@ const Navbar = () => {
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <span
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain  text-[38px]"
             onClick={() => setToggle(!toggle)}
           >
             {toggle ? <IoMdClose /> : <IoIosMenu />}
@@ -54,7 +54,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? 'hidden' : 'flex'
-            } p-6 black-gradient absolute top-2 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => (
@@ -62,7 +62,7 @@ const Navbar = () => {
                   key={link.id}
                   className={`${
                     active === link.title ? 'text-white' : 'text-secondary'
-                  } font-poppins font-medium cursor-pointer txt-[16px]`}
+                  } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setToggle(!toggle)
                     setActive(link.title)
